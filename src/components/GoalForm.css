@@ -1,0 +1,48 @@
+.form-controller {
+  width: 40rem;
+  margin: 3rem auto;
+  border: 1px solid gainsboro;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+.form input {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.form button {
+  width: 8rem;
+  padding: 0.5rem 1.5rem;
+  background: #8b005d;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  border: 1px solid #8b005d;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+}
+
+.form button:hover {
+  background: #ac0e77;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+.button:focus {
+  outline: none;
+}

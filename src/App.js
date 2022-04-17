@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import GoalForm from "./components/GoalForm";
+import GoalsList from "./components/GoalsList";
 
-function App() {
+const App = () => {
+
+  const [goals, setGoals] = useState([
+    { desc: 'Do all exercises!', id: 'g1' },
+    { desc: 'Finish the course!', id: 'g2' }
+  ]);
+
+  const newGoalToAdd = (newGoal) => {
+    setGoals([newGoal,...goals]);
+  };
+
+  const getID = (id) =>{
+    const newGoals = goals.filter((goal)=>{
+      return goal.id!==id
+    })
+    setGoals(newGoals);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GoalForm addNewGoal={newGoalToAdd} />
+      <GoalsList goals={goals} onSelectID={getID}/>
     </div>
   );
-}
+};
 
 export default App;
