@@ -43,6 +43,15 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
 }
 
-.button:focus {
+.form button:focus {
   outline: none;
+}
+
+.form.invalid input{
+  border-color: red;
+  background-color: #ffd7d7;
+}
+
+.form.invalid label{
+  color: red;
 }
